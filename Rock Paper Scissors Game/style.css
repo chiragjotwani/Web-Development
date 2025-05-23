@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(72, 151, 221);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: black;
+    color: aliceblue;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.choice {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: rgb(30, 30, 30);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 3rem;
+    gap: 6rem;
+    flex-wrap: wrap;
+}
+
+#user-score, #comp-score {
+    font-size: 5rem;
+    color: white;
+}
+
+.msg-container {
+    margin-top: 5rem;
+}
+
+#msg {
+    border-radius: 2rem;
+    background-color: rgb(8, 23, 99);
+    font-size: 2rem;
+    color: rgb(225, 230, 230);
+    display: inline-block;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .choices {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    #user-score, #comp-score {
+        font-size: 3rem;
+    }
+
+    .score-board {
+        gap: 3rem;
+    }
+
+    #msg {
+        font-size: 1.5rem;
+    }
+}
